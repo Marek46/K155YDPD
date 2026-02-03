@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hrad Brníčko – Zdroj (původní model)</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- model-viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">Brníčko</div>
+    <a class="navlink" href="projekt.html">O projektu</a>
+    <a class="navlink" href="historie.html">Historie</a>
+    <a class="navlink" href="index.html">Virtuální prohlídka</a>
+    <a class="navlink active" href="zdroje.html">Současný stav</a>
+    <a class="navlink" href="model.html">Model</a>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="container">
+    <h1>Původní 3D model</h1>
+    <p class="subtitle">
+      Neupravený zdrojový model použitý pro rekonstrukci
+    </p>
+  </div>
+</header>
+
+<main class="container page">
+
+  <section class="card">
+
+    <model-viewer
+      class="model-viewer"
+      src="puvodni.glb"
+      alt="Původní model hradu Brníčko"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      exposure="1"
+      environment-image="neutral"
+      touch-action="pan-y"
+    >
+      <div slot="poster" class="model-loading">
+        Načítám původní model…
+      </div>
+    </model-viewer>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year"></span> – Projekt YDPD</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

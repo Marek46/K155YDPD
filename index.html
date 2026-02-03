@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hrad Brníčko – 360° prohlídka</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+</head>
+
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">Brníčko</div>
+    <a class="navlink" href="projekt.html">O projektu</a>
+    <a class="navlink" href="historie.html">Historie</a>
+    <a class="navlink active" href="index.html">Virtuální prohlídka</a>
+    <a class="navlink" href="zdroje.html">Současný stav</a>
+    <a class="navlink" href="model.html">Model</a>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="container">
+    <h1>Hrad Brníčko - virtuální prohlíkda</h1>
+    <p class="subtitle">Přepínej panoramata šipkami nebo klávesami ← →.</p>
+  </div>
+</header>
+
+<main class="container page">
+  <section class="card viewer">
+    <div class="pano-wrapper">
+      <button id="prevPano" class="pano-btn left" aria-label="Předchozí panorama">❮</button>
+      <div id="panorama"></div>
+      <button id="nextPano" class="pano-btn right" aria-label="Další panorama">❯</button>
+
+      <div class="pano-bottom">
+        <div class="pano-title">
+          <span id="panoTitle">Nádvoří</span>
+          <span id="panoCounter" class="pano-counter">1 / 3</span>
+        </div>
+        <div class="pano-help">Tip: Klávesy ← →</div>
+      </div>
+    </div>
+
+    <div class="viewer-row">
+      <button id="btnReset" class="btn">Reset</button>
+      <label class="check"><input id="chkRotate" type="checkbox" checked /> Auto-rotate</label>
+    </div>
+
+    <p class="small"></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year"></span> – Projekt YDPD</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

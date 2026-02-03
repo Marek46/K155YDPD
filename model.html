@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hrad Brníčko – 3D model</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- model-viewer (3D prohlížeč) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">Brníčko</div>
+    <a class="navlink" href="projekt.html">O projektu</a>
+    <a class="navlink" href="historie.html">Historie</a>
+    <a class="navlink" href="index.html">Virtuální prohlídka</a>
+    <a class="navlink" href="zdroje.html">Současný stav</a>
+    <a class="navlink active" href="model.html">Model</a>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="container">
+    <h1>Celý 3D model</h1>
+    <p class="subtitle">Otáčej myší, zoomuj kolečkem. Na mobilu lze otáčet prstem.</p>
+  </div>
+</header>
+
+<main class="container page">
+  <section class="card">
+    <h2>Interaktivní zobrazení</h2>
+
+    <model-viewer
+      class="model-viewer"
+      src="brnicko.glb"
+      alt="3D model hradu Brníčko"
+      camera-controls
+      touch-action="pan-y"
+      shadow-intensity="1"
+      exposure="1"
+      auto-rotate
+      auto-rotate-delay="1500"
+      environment-image="neutral"
+      ar
+    >
+      <!-- volitelně: loading text -->
+      <div slot="poster" class="model-loading">Načítám 3D model…</div>
+    </model-viewer>
+
+    <p class="small">
+      Pokud se model nenačte: zkontroluj cestu <code>assets/brnicko.glb</code> a spouštěj web přes server
+      (např. <code>python -m http.server 8000</code>).
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year"></span> – Projekt YDPD</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">Brníčko</div>
+    <a class="navlink" href="index.html">360° prohlídka</a>
+    <a class="navlink" href="historie.html">Historie</a>
+    <a class="navlink" href="projekt.html">Projekt</a>
+    <a class="navlink" href="zdroje.html">Zdroje</a>
+    <a class="navlink active" href="model.html">Model</a>
+  </div>
+</nav>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hrad Brníčko – Projekt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">Brníčko</div>
+    <a class="navlink active" href="projekt.html">O projektu</a>
+    <a class="navlink" href="historie.html">Historie</a>
+    <a class="navlink" href="index.html">Virtuální prohlídka</a>
+    <a class="navlink" href="zdroje.html">Současný stav</a>
+    <a class="navlink" href="model.html">Model</a>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="container">
+    <h1>O projektu</h1>
+    <p class="subtitle">
+      Semestrální projekt pro předmět YDPD – ČVUT Fakulta stavební
+    </p>
+  </div>
+</header>
+
+<main class="container onecol">
+
+  <section class="card">
+<div class="project-info">
+
+  <h2>Základní informace o projektu</h2>
+
+  <ul class="project-meta">
+    <li>
+      <strong>Škola:</strong>
+      <a href="https://www.fsv.cvut.cz/"
+         target="_blank" rel="noopener">
+        ČVUT – Fakulta stavební
+      </a>
+    </li>
+
+    <li>
+      <strong>Předmět:</strong> YDPD
+    </li>
+
+    <li>
+      <strong>Autor:</strong> Marek Hádlík
+    </li>
+
+    <li>
+      <strong>Kontakt:</strong>
+      <a href="mailto:hadlimar@cvut.cz">
+        hadlimar@cvut.cz
+      </a>
+    </li>
+
+  
+  </ul>
+
+</div>
+    <h2>Základní informace</h2>
+
+    
+
+    <p>
+      Cílem práce bylo vytvořit digitální 3D rekonstrukci hradu Brníčko
+      a zpřístupnit ji formou interaktivní webové prezentace.
+    </p>
+
+    <h2>Postup práce</h2>
+
+    <ol>
+      <li>Přizpůsobení terénu</li>
+      <li>Modelace hlavních objektů: obvodová hradba a palác</li>
+      <li>Modelování otvorů, oken a architektonických detailů</li>
+      <li>Aplikace materiálů</li>
+      <li>Nastavení osvětlení, nebe a tvorba 360° renderů</li>
+      <li>Tvorba webové prezentace (Pannellum, model-viewer)</li>
+    </ol>
+
+    <h2>Technické poznámky</h2>
+
+    <ul>
+      <li>Modelování po částech s využitím kolekcí podle částí hradu</li>
+      <li>Opakující se prvky (okna) řešeny pomocí instancí (Alt + D)</li>
+      <li>Optimalizace polygonů pro webové zobrazení</li>
+      <li>Tvorba virtuální prohlídky</li>
+      <li>Export modelu do formátu GLB pro webové použití</li>
+    </ul>
+
+    <h2>Závěr</h2>
+
+    <p>
+      Projekt spojil historický průzkum, 3D modelování a tvorbu webového rozhraní.
+      Výsledkem je digitální rekonstrukce hradu Brníčko.
+    </p>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year"></span> – Projekt YDPD</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
